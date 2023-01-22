@@ -1,3 +1,4 @@
+import "./AnimalShow.css"
 import {useState} from "react"
 import bird from './svg/bird.svg';
 import cat from './svg/cat.svg';
@@ -24,9 +25,9 @@ const AnimalShow=({type})=>{
         console.log(click);
     };
 
-    return <div onClick={handleClick}>
-        <img alt="animal" style={{width:100}} src={svgMap[type]}/>
-        <img alt="heart" style={{width:click*10}} src={heart}/>
+    return <div className="animal-show" onClick={handleClick}>
+        <img className="animal" alt="animal"  src={svgMap[type]}/>
+        <img className="heart" alt="heart" style={{width:click*10}} src={heart}/>
         
         </div>;
 }
